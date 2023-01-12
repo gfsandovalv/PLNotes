@@ -135,6 +135,10 @@
 \setchapterstyle{kao} % Choose the default chapter heading style
 
 \pagelayout{wide} % No margins
+\addpart{Mecánica Estadística} %% Part
+\pagelayout{margin} % Restore margins
+
+\pagelayout{wide} % No margins
 \addpart{Mecánica Cuántica} %% Part
 \pagelayout{margin} % Restore margins
 
@@ -147,7 +151,11 @@
 
 %\input{chapters/mathematics.tex}
 \input{chapters/Matemáticas/Algebra tensorial afin/Transformaciones ortogonales en E_3.tex}
+\pagelayout{wide} % No margins
+\addpart{Cosmología}
+\pagelayout{margin} % Restore margins
 
+%\input{chapters/Cosmología/Espacios simétricos.tex}
 \appendix % From here onwards, chapters are numbered with letters, as is the appendix convention
 
 \pagelayout{wide} % No margins
