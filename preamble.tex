@@ -1,12 +1,4 @@
 
-\documentclass[
-	a4paper, % Page size
-	fontsize=10pt, % Base font size
-	twoside=true, % Use different layouts for even and odd pages (in particular, if twoside=true, the margin column will be always on the outside)
-	%open=any, % If twoside=true, uncomment this to force new chapters to start on any page, not only on right (odd) pages
-	%chapterentrydots=true, % Uncomment to output dots from the chapter name to the page number in the table of contents
-	numbers=noenddot, % Comment to output dots after chapter numbers; the most common values for this option are: enddot, noenddot and auto (see the KOMAScript documentation for an in-depth explanation)
-]{kaobook}
 
 \usepackage{mathtools}
 \usepackage{cancel}
@@ -47,23 +39,24 @@
 %\counterwithin*{sidenote}{chapter}
 
 % --------------------------------------------
-% 		SOME MATH COMMANDS DEFINITIONS
+% 		DEFINICIONES DE COMANDOS Y SÍMBOLOS MATEMÁTICOS
 % --------------------------------------------
 
 
-\renewcommand{\d}{\text d} % differential
-\newcommand{\dd}[2]{\dfrac{\d #1}{\d #2}} % total derivative 
-\newcommand{\ddp}[2]{\dfrac{\partial #1}{\partial #2}} % partial derivative
-\renewcommand{\vec}[1]{ \mathbf #1} % vectors with bold font
-\newcommand{\abs}[1]{\lvert #1 \rvert} % absolute value
-\newcommand{\del}{\partial} % del operator is not nabla
-\newcommand{\paren}[1]{\left(#1\right)} % big parentheses
-\newcommand{\commu}[2]{#1 #2 - #2 #1} % expansion of commutator
-\newcommand{\ket}[1]{\lvert #1 \rangle} % ket
+\renewcommand{\d}{\text d} % diferencial, una d sin itálicas 
+\newcommand{\dd}[2]{\dfrac{\d #1}{\d #2}} % derivada total de #1 respecto a #2
+\newcommand{\ddp}[2]{\dfrac{\partial #1}{\partial #2}} % derivada parcial de #1 respectoa a #2
+\renewcommand{\vec}[1]{ \mathbf #1} % vectores con negrita en vez de la flecha como acento 
+\newcommand{\abs}[1]{\lvert #1 \rvert} % valor absoluto
+\newcommand{\del}{\partial} % del := símbolo de derivada parcial 
+\newcommand{\paren}[1]{\left(#1\right)} % parentesis grandes, se adaptan al tamaño de la expresión
+\newcommand{\commu}[2]{#1 #2 - #2 #1} % expansión de un conmutador
 \newcommand{\bra}[1]{\langle #1 \rvert} % bra
-\newcommand{\normbraket}[1]{\langle #1 \rvert #1 \rangle} % the norm of something in bra-ket notation
-\newcommand{\then}{\Longrightarrow} % then arrow
-%\newcommand{\def}{\coloneqq} % definition denoted as :=
-\renewcommand{\mapsto}{\longmapsto} % long arrow for maps-to symbol
-\newcommand{\reals}{\mathbb R} % set of real numbers
-\newcommand{\complexes}{\mathbb C} % set of complex numbers
+\newcommand{\ket}[1]{\lvert #1 \rangle} % ket
+\newcommand{\normbraket}[1]{\langle #1 \rvert #1 \rangle} % la norma de un estado en notación de dirac
+\newcommand{\matrixElement}[3]{\bra{#2} #1 \ket{#3}} % elemento de matriz de un operador <#2|#1|#3> 
+\newcommand{\then}{\Longrightarrow} % Flecha de "entonces"
+\newcommand{\def}{\coloneqq} % definición de una variable/símbolo con ":=" 
+\renewcommand{\mapsto}{\longmapsto} % flecha larga para indicar el mapeo de una funcipon f: A ---> B 
+\newcommand{\reals}{\mathbb R} % Números reales
+\newcommand{\complexes}{\mathbb C} % Números complejos

@@ -1,16 +1,16 @@
-\section{Cannonical: Position and momentum}
-We will show that $[x_i,p_j] = i\hbar\delta_{ij}$.
----- ----
-Recalling that $p_j = -i \hbar \ddp{}{x_j} = -i\hbar \del_j$  we have
+\section{Relaciones de conmutación}
+\subsection{Relación canónica: Posición y momento}
+Se mostrará que $[x_i,p_j] = i\hbar\delta_{ij}$.
+
+Recordando que $p_j = -i \hbar \ddp{}{x_j} = -i\hbar \del_j$, se tiene
 
 \begin{align}
 	[x_i, p_j] &= -i\hbar [x_i, \del_j] \\
 			&= -i\hbar \paren{x_i \del_j - (\del_jx_i)}
 \end{align}
 
-In order to see more clearly this product, let us apply it over an arbitrary function $\psi$ %(See [[Functions space#Calculation Example: $[X, D_{x}]$]])
-
-
+Para ver más claramente en qué resulta de esta diferencia, se aplica la expresión a una función arbitraria $\psi$  
+%(See [[Functions space#Calculation Example: $[X, D_{x}]$]])
 
 \begin{align}
 	\paren{x_i \del_j - (\del_jx_i)}\psi &= x_i \del_j\psi - \del_j(x_i \psi) \\
@@ -18,16 +18,14 @@ In order to see more clearly this product, let us apply it over an arbitrary fun
 		&= -\delta_{ij}\psi
 \end{align}
 
-Finally, 
-
+Finalmente, 
 \begin{align}
 	[x_i, p_j]\psi &= -i\hbar\paren{-\delta_{ij}\psi} \\
 	\Rightarrow \Aboxed{[x_i, p_j] &= i\hbar\delta_{ij}}
 \end{align}
 
-
-\section{Angular momentum}
-\subsection{$[L_i,L_j] = L_k$}
+\subsection{Momento Angular}
+\subsubsection{$[L_i,L_j] = L_k$}
 
 
 \begin{align}
@@ -35,28 +33,26 @@ Finally,
 		&= \epsilon_{ist}\epsilon_{jmn}[ x_s p_t , x_m p_n ] \\
 \end{align}
 
+Se expande el último conmutador de la siguiente forma, 
 
-
-The last commutator is expanded,
-
-\begin{align}
+\begin{align*}
 	[ x_s p_t, x_m p_n ] &= x_s [  p_t, x_m p_n ] + [ x_s, x_m p_n ] p_t\\
 		&= x_s x_m \cancel{[  p_t, p_n ]} + x_s [  p_t, x_m ]p_n  + x_m [ x_s, p_n ] p_t + \cancel{[ x_s, x_m ]}p_n p_t \\
 		&= -x_s [x_m, p_t]p_n + x_m[ x_s, p_n]p_t \\
 		&= -x_s(\delta_{mt})p_n + x_m(\delta_{sn})pt \\
 		&= i\hbar \paren{x_m p_t \delta_{sn} - x_s p_n \delta_{mt}}
-\end{align}
+\end{align*}
 
-Returning to the whole expression,   
+Volviendo a la expresión completa,   
 
 \begin{align}
 	[L_i,L_j] &=i\hbar\epsilon_{ist}\epsilon_{jmn} \paren{x_m p_t \delta_{sn} - x_s p_n \delta_{mt}} \\
 		&=i\hbar \paren{\epsilon_{ist}\epsilon_{jmn}x_m p_t \delta_{sn} - \epsilon_{ist}\epsilon_{jmn}x_s p_n \delta_{mt}}
 \end{align}
 
-Using Levi-Civita symbol properties
+Ahora, usando 
 
-\begin{align}
+\begin{align*}
 	[L_i,L_j] &= i\hbar\paren{\det\paren{\begin{bmatrix}
 	\delta_{tj}&\delta_{tm}\\\delta_{ij}&\delta_{im}
 	\end{bmatrix}}x_m p_t - \det\paren{\begin{bmatrix}
@@ -67,18 +63,18 @@ Using Levi-Civita symbol properties
 	&=  i\hbar \paren{x_i p_j -  x_jp_i } \\
 	&= i\hbar \epsilon_{ijk} \,x_i p_j \\
 	&= i\hbar\epsilon_{ijk}L_k
-\end{align}
+\end{align*}
 
-\subsection{$[\vec L^2,L_k] = 0$}
+\subsubsection{$[\vec L^2,L_k] = 0$}
 
-\begin{align}
+\begin{align*}
 	[\vec L^2,L_k] &= [L_i L_i,L_k] \\
 		&= L_i[L_i,L_k] + [L_i,L_k]L_i \\
 		&= i\hbar \paren{\epsilon_{ijk} L_i L_k + \epsilon_{ijk}L_k L_i} \\
 		&= i\hbar\epsilon_{ijk}\{L_i,L_k\}
-\end{align}
+\end{align*}
 
-The anticommutator $\{\, ,\,\}$ is symmetric. When it is contracted with Levi-Civita symbol, which is antisymmetric in all its indexes, the result is zero. 
+El anticonmutador $\{\, ,\,\}$ es simétrico, cuando este se contrae con el tensor de Levi-Civital, el cual es antisimétrico, el resultado es nulo. 
 %TODO show contraction of symmetric and antisymmetric tensors
 
 
