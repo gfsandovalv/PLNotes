@@ -2,28 +2,11 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[
-	a4paper, % Page size
-	fontsize=10pt, % Base font size
-	twoside=true, % Use different layouts for even and odd pages (in particular, if twoside=true, the margin column will be always on the outside)
-	%open=any, % If twoside=true, uncomment this to force new chapters to start on any page, not only on right (odd) pages
-	%chapterentrydots=true, % Uncomment to output dots from the chapter name to the page number in the table of contents
-	numbers=noenddot, % Comment to output dots after chapter numbers; the most common values for this option are: enddot, noenddot and auto (see the KOMAScript documentation for an in-depth explanation)
-]{kaobook}
 \input{preamble.tex}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
-
-% --------------------------
-%       PATH TO IMAGES
-% --------------------------
-
-\graphicspath{ 
-    {chapters/Matemáticas/Sistema_de_coordenadas/images/}
-    {images/}
-}%
 
 %----------------------------------------------------------------------------------------
 %	BOOK INFORMATION
@@ -160,19 +143,15 @@
 \addpart{Mecánica Cuántica} %% Part
 \pagelayout{margin} % Restore margins
 
-\input{chapters/Mecánica Cuántica/momento_angular_main.tex}
+\input{chapters/mecanica_cuantica/momento_angular_main.tex}
 
 \pagelayout{wide} % No margins
 \addpart{Matemáticas}
 \pagelayout{margin} % Restore margins
 
 %\input{chapters/mathematics.tex}
-\input{chapters/Matemáticas/Algebra tensorial afin/Transformaciones ortogonales en E_3.tex}
-%\input{chapters/Matemáticas/Sistema_de_coordenadas/coordenadas_cirvilineas.tex}
-
-\begin{center}
-	\includegraphics[]{cord_cilindricas}
-\end{center}
+\input{chapters/matematicas/algebra_tensorial_afin/Transformaciones ortogonales en E_3.tex}
+\input{chapters/matematicas/sistema_de_coordenadas/coordenadas_cirvilineas.tex}
 
 \pagelayout{wide} % No margins
 \addpart{Cosmología}
@@ -184,8 +163,6 @@
 \pagelayout{wide} % No margins
 \addpart{Appendix}
 \pagelayout{margin} % Restore margins
-
-
 
 %----------------------------------------------------------------------------------------
 

@@ -1,3 +1,12 @@
+\documentclass[
+	a4paper, % Page size
+	fontsize=10pt, % Base font size
+	twoside=true, % Use different layouts for even and odd pages (in particular, if twoside=true, the margin column will be always on the outside)
+	%open=any, % If twoside=true, uncomment this to force new chapters to start on any page, not only on right (odd) pages
+	%chapterentrydots=true, % Uncomment to output dots from the chapter name to the page number in the table of contents
+	numbers=noenddot, % Comment to output dots after chapter numbers; the most common values for this option are: enddot, noenddot and auto (see the KOMAScript documentation for an in-depth explanation)
+]{kaobook}
+
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
@@ -7,16 +16,18 @@
 \usepackage{stmaryrd}
 \usepackage{graphicx}
 \usepackage[export]{adjustbox}
-
+\usepackage[english]{babel}
 \usepackage{mathtools}
 \usepackage{cancel}
+
 % Choose the language
-\ifxetexorluatex
-	\usepackage{polyglossia}
-	\setmainlanguage{english}
-\else
-	\usepackage[english]{babel} % Load characters and hyphenation
-\fi
+
+%\ifxetexorluatex
+%	\usepackage{polyglossia}
+%	\setmainlanguage{english}
+%\else
+%	\usepackage[english]{babel} % Load characters and hyphenation
+%\fi
 \usepackage[english=british]{csquotes}	% English quotes
 
 % Load packages for testing
@@ -48,7 +59,6 @@
 % 		DEFINICIONES DE COMANDOS Y SÍMBOLOS MATEMÁTICOS
 % --------------------------------------------
 
-
 \renewcommand{\d}{\text d} % diferencial, una d sin itálicas 
 \newcommand{\dd}[2]{\dfrac{\d #1}{\d #2}} % derivada total de #1 respecto a #2
 \newcommand{\ddp}[2]{\dfrac{\partial #1}{\partial #2}} % derivada parcial de #1 respectoa a #2
@@ -66,4 +76,13 @@
 \renewcommand{\mapsto}{\longmapsto} % flecha larga para indicar el mapeo de una funcipon f: A ---> B 
 \newcommand{\reals}{\mathbb R} % Números reales
 \newcommand{\complexes}{\mathbb C} % Números complejos
+
+% --------------------------
+%       PATH TO IMAGES
+% --------------------------
+
+\graphicspath{ 
+    {chapters/}
+    {chapters/matematicas/sistema_de_coordenadas/}
+}%
 
