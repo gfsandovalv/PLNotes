@@ -1,7 +1,9 @@
 #!/bin/bash
 
+
+
 # Compile document
-pdflatex -interaction=nonstopmode main
+pdflatex -shell-escape -interaction=nonstopmode -shell-escape main
 
 # Compile nomenclature
 makeindex main.nlo -s nomencl.ist -o main.nls
@@ -13,10 +15,10 @@ makeindex main
 biber main
 
 # Compile document
-pdflatex main
+pdflatex -shell-escape main
 
 # Compile glossary
 makeglossaries main
 
 # Compile document
-pdflatex main
+pdflatex -shell-escape main
